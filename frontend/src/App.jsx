@@ -1,5 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 
+const API_URL =
+    import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'
+
 const MAX_FILE_SIZE = 10 * 1024 * 1024 // 10 MB
 
 function formatBytes(bytes) {
@@ -208,7 +211,7 @@ export default function App() {
       const formData = new FormData()
       formData.append('file', compressedFile)
 
-      const response = await fetch('/api/analyze', {
+      const response = await fetch(API_URL+'/api/analyze', {
         method: 'POST',
         body: formData,
       })
@@ -254,7 +257,7 @@ export default function App() {
       setTranslating(true)
       setError(null)
 
-      const response = await fetch('/api/translate', {
+      const response = await fetch(API_URL+'/api/translate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(result),
