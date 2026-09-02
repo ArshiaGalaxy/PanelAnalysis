@@ -1,0 +1,12 @@
+Translate every text value in the following JSON comic-panel analysis into natural, fluent Persian (Farsi).
+
+Rules:
+- Keep the exact same JSON structure and keys.
+- "scene", "youtube_hook", "youtube_title", "animation_prompt": translate fully.
+- "description": translate fully.
+- "emotions": translate each emotion into Persian.
+- character "name": transliterate proper names naturally; translate generic names.
+- character "id": keep unchanged.
+- Use standard Persian typography and punctuation.
+
+Return ONLY the translated JSON object, no markdown fences or commentary.

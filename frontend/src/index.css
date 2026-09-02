@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/* Mikhak DS2 (FD = Farsi digits) — local files from public/fonts/ */
+@font-face {
+  font-family: "Mikhak";
+  src: url("/fonts/Mikhak-DS2-FD-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mikhak";
+  src: url("/fonts/Mikhak-DS2-FD-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mikhak";
+  src: url("/fonts/Mikhak-DS2-FD-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mikhak";
+  src: url("/fonts/Mikhak-DS2-FD-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* Darkroom palette — graphite surfaces, one warm safelight accent */
+  --color-night: #0b0f14;
+  --color-panel: #11161d;
+  --color-panel-2: #161d26;
+  --color-hairline: #232b35;
+  --color-mist: #8b98a5;
+  --color-chalk: #e8edf2;
+  --color-safelight: #ffb454;
+  --color-safelight-bright: #ffc470;
+  --color-safelight-dim: #b57a2e;
+  --color-signal-red: #f87171;
+  --color-signal-green: #4ade80;
+
+  /* Persian text — Mikhak DS2 (local), system fallbacks as safety net */
+  --font-fa: Mikhak, Vazirmatn, Vazir, Tahoma, "Segoe UI", sans-serif;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background: var(--color-night);
+  color: var(--color-chalk);
+  font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
