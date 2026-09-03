@@ -2,8 +2,9 @@ from dotenv import load_dotenv
 load_dotenv()
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api.analyze import router as analyze_router
-from app.api.translate import router as translate_router
+from api.analyze import router as analyze_router
+from api.translate import router as translate_router
+import os
 
 
 app = FastAPI(
